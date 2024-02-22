@@ -4,7 +4,7 @@ import React,{useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 // import toast from 'react-hot-toast';
-// import './Auth.css';
+ import './Auth.css';
 
 const Login = () => {
   const[email,setEmail] = useState('')
@@ -14,14 +14,14 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://ecombackend-qgpr.onrender.com/api/login', { email, password });
+      const res = await axios.post('/api/login', { email, password });
       if (res.data.success) {
         // toast.success(res.data && res.data.message);
         console.log(res.data.user); 
         localStorage.setItem("token", res.data.token);
         navigate('/');
       } else {
-        toast.error(res.data.message);
+        // toast.error(res.data.message);
       }
     } catch (error) {
     //   toast.error('user not available');
