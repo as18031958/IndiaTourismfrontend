@@ -111,7 +111,7 @@ const Headers = () => {
             <li><NavLink to="/login">Login</NavLink></li>
           </>
         )}
-          <li><NavLink to="/addtocart">Cart</NavLink></li>
+          {/* <li><NavLink to="/addtocart">Cart</NavLink></li> */}
         </div>
       )}
     </nav>
