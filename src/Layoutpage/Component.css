@@ -3,7 +3,7 @@
 
 body{
 font-family: sans-serif;
-  background-color:#4f7cdc;
+  background-color:#7c8596;
  /* height: fit-content; */
  background-repeat: no-repeat;
  
@@ -28,7 +28,7 @@ font-family: sans-serif;
     text-align: center;
 }
 
-  .logo{
+   .logo{
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 50px;
@@ -56,6 +56,40 @@ font-family: sans-serif;
     text-decoration: none;
     color: #378b96;
     padding: 0.5rem 1rem;
+  } 
+
+  .TopNav{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px;
+    width: 98vw;
+  }
+  
+  /* .logo{
+    width: 30vw;
+    height: 60px;
+  } */
+  
+  .innerLogo{
+    display: flex;
+    gap: 20px;
+  }
+  
+  .NavBar{
+    background-color: rgb(153, 37, 37);
+    width: 100%;
+    height: 5vh;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  
+  }
+  
+  .NavBar a{
+    text-decoration: none;
+    color: white;
   }
   
   .hamburger-menu {
@@ -115,7 +149,7 @@ font-family: sans-serif;
   .hero-section {
     
     grid-column: span 12;
-    background-image: url("./miles-burke-idhx-MOCDSk-unsplash.jpg");
+    /* background-image: url("./miles-burke-idhx-MOCDSk-unsplash.jpg"); */
     background-size: cover;
     background-position: center;
     padding-top: 5em;
@@ -244,3 +278,5 @@ font-family: sans-serif;
     color: midnightblue;
     margin-top: 100px;
   }
+
+  

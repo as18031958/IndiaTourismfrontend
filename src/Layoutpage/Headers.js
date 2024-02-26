@@ -1,9 +1,9 @@
 
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect} from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import './Component.css'; // Import your CSS file for styling
-// import { FaCartArrowDown } from "react-icons/fa";
-// import { GiShop } from "react-icons/gi";
+
+
 
 
 
@@ -12,7 +12,7 @@ import './Component.css'; // Import your CSS file for styling
 
 const Headers = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
+  // const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate()
 
@@ -21,6 +21,14 @@ const Headers = () => {
     setIsLoggedIn(false); // Update login state
     navigate('/login'); // Redirect to login page
   };
+
+  const Auth = async ()=>{
+    const token = localStorage.getItem("token")
+       if(!token){
+         alert("login First!")
+         navigate('/login')
+       }
+   }
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -33,38 +41,36 @@ const Headers = () => {
     setIsOpen(!isOpen);
   };
 
-  const toggleProductsDropdown = () => {
-    setIsProductsDropdownOpen(!isProductsDropdownOpen);
-  };
+  
 
   return (
-    <nav className="navbar">
-      {/* <NavLink to="/" className="logo">
-        <GiShop /> zShop
-      </NavLink> */}
-      <ul className="nav-links">
+     <nav>
+    
+      <span className='TopNav'>
+                <div className='innerLogo'>
+                <img className='logo' src='https://www.theindiatourism.com/images/logo.webp' alt='not found' />
+                <img className='logo' src='https://www.theindiatourism.com/images/atithi-devo-bhava.webp' alt='not found' />
+                </div>
+                <div>
+                    <h3 className='headerEmail'>Email : info@theindiatourism.com</h3>
+                    <span>
+                        <img src='https://www.theindiatourism.com/images/india.webp' alt='not found' />
+                        +91 9549279999
+                    </span>
+                </div>
+            </span>
+     
+      <ul className="NavBar">
         <li><NavLink to="/">Home</NavLink></li>
-        <li>
-          <NavLink to="/pro" onClick={toggleProductsDropdown}>
-            Products
-          
-          {isProductsDropdownOpen && (
-            <ul className="dropdown-content">
-                <li><NavLink to="/smartphones">Smartphones</NavLink></li>
-                <li><NavLink to="/laptop">Laptops</NavLink></li>
-                <li><NavLink to="/homedecoration">Homedecoration</NavLink></li>
-                <li><NavLink to="/menswatches">Menswatches</NavLink></li>
-                <li><NavLink to="/sunglasses">Sunglasses</NavLink></li>
-              
-            </ul>
-         )}
-         </NavLink>
-        </li>
-
+        <li><NavLink onClick={Auth}to="/indiatourism">IndiaTourism</NavLink></li>
+        <li><NavLink to="/placestovisit">PlacesToVisit</NavLink></li>
+        <li><NavLink onClick={Auth} to="/tourpackages">TourPackages</NavLink></li>
+        <li><NavLink to="/touroffers">TourOffers</NavLink></li>
+        <li><NavLink to="/contact">Contact</NavLink></li>
         {isLoggedIn ? (
           <>
           <li>
-            <button onClick={handleLogout}>Logout</button>
+            <NavLink onClick={handleLogout}>Logout</NavLink>
           </li>
           </>
         ) : (
@@ -73,7 +79,6 @@ const Headers = () => {
             <li><NavLink to="/login">Login</NavLink></li>
           </>
         )}
-        <li><NavLink to="/addtocart"><FaCartArrowDown style={{ fontSize: 24 }} /></NavLink></li>
       </ul>
       <button className="hamburger-menu" onClick={toggleHamburgerMenu}>
         <span className="bar"></span>
@@ -82,23 +87,13 @@ const Headers = () => {
       </button>
       {isOpen && (
         <div className="nav-links-mobile">
-          <li><NavLink to="/">Home</NavLink></li>
-          <li>
-          {/* Products dropdown */}
-          <NavLink to="/pro" onClick={toggleProductsDropdown}>
-            Products
-          </NavLink>
-          {isProductsDropdownOpen && (
-            <ul className="dropdown-content">
-                <li><NavLink to="/smartphones">Smartphones</NavLink></li>
-                <li><NavLink to="/laptop">Laptops</NavLink></li>
-                <li><NavLink to="/homedecoration">Homedecoration</NavLink></li>
-                <li><NavLink to="/menswatches">Menswatches</NavLink></li>
-                <li><NavLink to="/sunglasses">Sunglasses</NavLink></li>
-              
-            </ul>
-         )}
-        </li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/indiatourism">IndiaTourism</NavLink></li>
+        <li><NavLink to="/placestovisit">PlacesToVisit</NavLink></li>
+        <li><NavLink to="/tourpackages">TourPackages</NavLink></li>
+        <li><NavLink to="/touroffers">TourOffers</NavLink></li>
+        <li><NavLink to="/contact">Contact</NavLink></li>
+             
         {isLoggedIn ? (
           <>
           <li>
@@ -111,10 +106,11 @@ const Headers = () => {
             <li><NavLink to="/login">Login</NavLink></li>
           </>
         )}
-          {/* <li><NavLink to="/addtocart">Cart</NavLink></li> */}
+
         </div>
       )}
-    </nav>
+      </nav>
+    
   );
 };
 
