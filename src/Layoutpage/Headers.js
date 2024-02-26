@@ -48,13 +48,13 @@ const Headers = () => {
     
       <span className='TopNav'>
                 <div className='innerLogo'>
-                <img className='logo' src='https://www.theindiatourism.com/images/logo.webp' alt='not found' />
-                <img className='logo' src='https://www.theindiatourism.com/images/atithi-devo-bhava.webp' alt='not found' />
+                <img className='logo' src='http://www.theindiatourism.com/images/logo.webp' alt='not found' />
+                <img className='logo' src='http://www.theindiatourism.com/images/atithi-devo-bhava.webp' alt='not found' />
                 </div>
                 <div>
                     <h3 className='headerEmail'>Email : info@theindiatourism.com</h3>
                     <span>
-                        <img src='https://www.theindiatourism.com/images/india.webp' alt='not found' />
+                        <img src='http://www.theindiatourism.com/images/india.webp' alt='not found' />
                         +91 9549279999
                     </span>
                 </div>

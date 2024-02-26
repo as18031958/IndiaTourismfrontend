@@ -13,8 +13,8 @@ const DynamicPage = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // const url= "https://majorbackend-mfy9.onrender.com/findAllData"
-                 const url = "/api/data"
+                
+                 const url = "https://indiatourismbackend-mib5.onrender.com/api/data"
                 const response = await axios.get(url);
                 setData(response.data);
                 console.log(response.data);

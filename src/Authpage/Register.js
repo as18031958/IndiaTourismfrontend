@@ -17,7 +17,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      const res = await axios.post('/api/register',{name,email,password,phone,address});
+      const res = await axios.post('https://indiatourismbackend-mib5.onrender.com/api/register',{name,email,password,phone,address});
       if(res.data.success){
         toast.success(res.data && res.data.message)
         localStorage.setItem("token", res.data.token);

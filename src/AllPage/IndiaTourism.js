@@ -13,6 +13,7 @@ const IndiaTourism = () => {
         if(token){
             const fetchData = async () => {
                 try {
+
                      const url = "https://indiatourismbackend-mib5.onrender.com/api/data"
                     const response = await axios.get(url);
                     setData(response.data);
