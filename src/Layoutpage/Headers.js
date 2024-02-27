@@ -83,21 +83,7 @@ const Headers = () => {
         <li><NavLink to="/tourpackages">TourPackages</NavLink></li>
         <li><NavLink to="/touroffers">TourOffers</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
-             
-        {isLoggedIn ? (
-          <>
-          <li>
-          <NavLink onClick={handleLogout}>Logout</NavLink>
-          </li>
-          </>
-        ) : (
-          <>
-            <li><NavLink to="/register">Register</NavLink></li>
-            <li><NavLink to="/login">Login</NavLink></li>
-          </>
-        )}
-
-        </div>
+         </div>
       )}
       </nav>
     
