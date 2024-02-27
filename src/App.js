@@ -33,7 +33,6 @@ import TermsandCondition from './Layoutpage/TermsandCondition';
         <Route path='layout'   element={<Layout/>}/>
         <Route path='paymentprocedure' element={<PaymentProcedure/>}/>
         <Route path='termsandcondition' element={<TermsandCondition/>}/>
-        {/* <Route path='' element={</>}/> */}
         <Route path='/dynamic/:id' element={<Dyanamic/>}/>
         <Route path='*' element={<Pnf/>}/> 
       </Routes>

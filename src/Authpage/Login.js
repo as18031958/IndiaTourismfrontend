@@ -31,6 +31,7 @@ const Login = () => {
 
   return (
     <Layout>
+      <div className='Register'>
       <form onSubmit={handleSubmit}>
         <div className="input-group">
           <label htmlFor="email">Email:</label>
@@ -60,6 +61,7 @@ const Login = () => {
 
         <button type="submit">Login</button>
       </form>
+      </div>
      </Layout>
   );
 };

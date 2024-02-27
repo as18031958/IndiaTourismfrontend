@@ -14,7 +14,7 @@ const Footer = () => {
                 <NavLink to='/'>Site Map</NavLink>|
                 <NavLink to='/'>Payment Procedure</NavLink>|
                 <NavLink to='/'>Terms & Conditions</NavLink>|
-                <NavLink to='/'>Link Exchange</NavLink>|
+        
 
         </p>
         <div className='FooterContainer'>

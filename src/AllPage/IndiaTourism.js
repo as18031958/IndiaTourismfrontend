@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Layout from '../Layoutpage/Layout'
 import { NavLink, useNavigate } from 'react-router-dom'
 import CarouselComponent from './Corousel'
+import "../App.css"
 
 const IndiaTourism = () => {
     const [data, setData] = useState([])

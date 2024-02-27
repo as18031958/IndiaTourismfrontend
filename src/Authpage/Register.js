@@ -37,7 +37,7 @@ const Register = () => {
 
   return (
      <Layout>
-       <div>
+       <div className='Register'>
       <form onSubmit={handleSubmit}>
         <div className="input-group">
           <label htmlFor="name">Name:</label>

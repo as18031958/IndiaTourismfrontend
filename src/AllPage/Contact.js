@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../Layoutpage/Layout'
+import "../App.css"
 
 const Contact = () => {
   return (

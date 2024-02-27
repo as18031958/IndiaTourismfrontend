@@ -1,25 +1,18 @@
 
 import React, { useState,useEffect} from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import './Component.css'; // Import your CSS file for styling
-
-
-
-
-
-
-
+import './Component.css';
+import "../App.css" 
 
 const Headers = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate()
 
   const handleLogout = () => {
     localStorage.removeItem('token');
-    setIsLoggedIn(false); // Update login state
-    navigate('/login'); // Redirect to login page
+    setIsLoggedIn(false); 
+    navigate('/login'); 
   };
 
   const Auth = async ()=>{
@@ -33,7 +26,7 @@ const Headers = () => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      setIsLoggedIn(true); // Update login state if token exists
+      setIsLoggedIn(true); 
     }
   }, []);
 
@@ -97,7 +90,7 @@ const Headers = () => {
         {isLoggedIn ? (
           <>
           <li>
-            <button onClick={handleLogout}>Logout</button>
+          <NavLink onClick={handleLogout}>Logout</NavLink>
           </li>
           </>
         ) : (
