@@ -1,9 +1,9 @@
 import React,{useState} from 'react';
 // import { setEmail, setPassword } from '../../Store/slice';
-// import Layout from '../../Components/Layout';
+import Layout from '../Layoutpage/Layout';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-// import toast from 'react-hot-toast';
+ import toast from 'react-hot-toast';
  import './Auth.css';
 
 const Login = () => {
@@ -16,21 +16,21 @@ const Login = () => {
     try {
       const res = await axios.post('https://indiatourismbackend-mib5.onrender.com/api/login', { email, password });
       if (res.data.success) {
-        // toast.success(res.data && res.data.message);
+         toast.success(res.data && res.data.message);
         console.log(res.data.user); 
         localStorage.setItem("token", res.data.token);
         navigate('/');
       } else {
-        // toast.error(res.data.message);
+        toast.error(res.data.message);
       }
     } catch (error) {
-    //   toast.error('user not available');
+     toast.error('user not available');
       navigate('/register')
     }
   };
 
   return (
-    // <Layout title="Login">
+    <Layout>
       <form onSubmit={handleSubmit}>
         <div className="input-group">
           <label htmlFor="email">Email:</label>
@@ -60,7 +60,7 @@ const Login = () => {
 
         <button type="submit">Login</button>
       </form>
-    // {/* </Layout> */}
+     </Layout>
   );
 };
 

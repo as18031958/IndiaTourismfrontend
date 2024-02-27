@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import Layout from '../Layoutpage/Layout';
+import Layout from '../Layoutpage/Layout';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
@@ -36,7 +36,7 @@ const Register = () => {
   };
 
   return (
-    // <Layout title="Register">
+     <Layout>
        <div>
       <form onSubmit={handleSubmit}>
         <div className="input-group">
@@ -107,7 +107,7 @@ const Register = () => {
         <button type="submit">Register</button>
       </form>
       </div> 
-    // </Layout>
+     </Layout>
   );
 };
 
