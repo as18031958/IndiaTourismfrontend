@@ -24,7 +24,7 @@ const Footer = () => {
                     
                 </div>
                 <div className='footerLogo'>
-                    <img src='http://www.theindiatourism.com/images/India-tour-footer.jpg' alt='not found'/>
+                    <img src='https://www.theindiatourism.com/images/India-tour-footer.jpg' alt='not found'/>
                 </div>
                    
 
