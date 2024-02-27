@@ -50,6 +50,15 @@ const Headers = () => {
                         <img src='http://www.theindiatourism.com/images/india.webp' alt='not found' />
                         +91 9549279999
                     </span>
+                    {isLoggedIn ? (
+                      <button onClick={handleLogout}>Logout</button>
+                    ) : (
+                    <>
+                    <button onClick={handleLogout}>Register</button>
+                    <button onClick={handleLogout}>Login</button>
+                    </>
+                    )}
+      
                 </div>
             </span>
      
@@ -60,19 +69,7 @@ const Headers = () => {
         <li><NavLink onClick={Auth} to="/tourpackages">TourPackages</NavLink></li>
         <li><NavLink to="/touroffers">TourOffers</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
-        {isLoggedIn ? (
-          <>
-          <li>
-            <NavLink onClick={handleLogout}>Logout</NavLink>
-          </li>
-          </>
-        ) : (
-          <>
-            <li><NavLink to="/register">Register</NavLink></li>
-            <li><NavLink to="/login">Login</NavLink></li>
-          </>
-        )}
-      </ul>
+       </ul>
       <button className="hamburger-menu" onClick={toggleHamburgerMenu}>
         <span className="bar"></span>
         <span className="bar"></span>
