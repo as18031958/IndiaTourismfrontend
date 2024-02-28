@@ -50,17 +50,21 @@ const Headers = () => {
                         <img src='https://www.theindiatourism.com/images/india.webp' alt='not found' />
                         +91 9549279999
                     </span>
-                    {isLoggedIn ? (
-                      <button onClick={handleLogout}>Logout</button>
-                    ) : (
-                    <>
-                    <button onClick={handleLogout}>Register</button>
-                    <button onClick={handleLogout}>Login</button>
-                    </>
-                    )}
+                   
       
                 </div>
+               
             </span>
+            <span className='Bttt'>
+                {isLoggedIn ? (
+                      <button className='Bttn' onClick={handleLogout}>Logout</button>
+                    ) : (
+                    <div className='reg'>
+                    <button className=' Bttn1' onClick={handleLogout}>Register</button>
+                    <button  className=' Bttn2' onClick={handleLogout}>Login</button>
+                    </div>
+                    )}
+                    </span>
      
       <ul className="NavBar">
         <li><NavLink to="/">Home</NavLink></li>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import { NavLink } from 'react-router-dom'
 import axios from "axios"
 import "../App.css"
 
@@ -49,8 +49,10 @@ return (
               {data.filter(item => item.category === "Tour Offers").map((item)=>{
                   return(
                       <div className='innerContainer'>
+                        <NavLink to={`/Dynamic/${item.id}`}>
                           <img src={item.image} alt='not found'/>
                           <h4>{item.place}</h4>
+                          </NavLink>
                       </div>
                   )
               })}

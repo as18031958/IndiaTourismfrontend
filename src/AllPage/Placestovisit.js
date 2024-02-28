@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Layout from '../Layoutpage/Layout'
 import axios from "axios"
 import "../App.css"
+import { NavLink } from 'react-router-dom'
 import CarouselComponent from './Corousel'
 
 
@@ -38,8 +39,10 @@ return (
               {data.filter(item => item.category === "home" || item.category === "Tour Package").map((item)=>{
                   return(
                       <div className='innerContainer'>
+                        <NavLink to={`/Dynamic/${item.id}`}>
                           <img src={item.image} alt='not found'/>
                           <h4>{item.place}</h4>
+                          </NavLink>
                       </div>
                   )
               })}

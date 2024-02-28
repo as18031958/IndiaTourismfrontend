@@ -34,9 +34,10 @@ const DynamicPage = () => {
                 return (
                     <div className='DynamicContainer'>
                         <div>
+                        <NavLink to={`/Dynamic/${item.id}`}>
                             <img className='DynamicImg' src={item.image} alt='not found' />
                             <h1>{item.place}</h1>
-
+                            </NavLink>
                         </div>
                         <div className='DynamicText'>
                             <h3>{item.about}</h3>

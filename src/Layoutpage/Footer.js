@@ -6,14 +6,14 @@ import {NavLink} from 'react-router-dom'
 const Footer = () => {
   return (
     <div className='footer'>
-        <h1 className='text center'>
+        {/* <h1 className='text center'>
             All Right Reserved &copy; SAA Tech Pvt Ltd
-        </h1>
+        </h1> */}
         <p className='Footer-Link'>
-        <NavLink to='/ContactUs'>Contact US</NavLink>|
+        <NavLink to='/ContactUs'>Contact US</NavLink>|<br/>
                 <NavLink to='/'>Site Map</NavLink>|
                 <NavLink to='/'>Payment Procedure</NavLink>|
-                <NavLink to='/'>Terms & Conditions</NavLink>|
+                <NavLink to='/'>T&C</NavLink>|
         
 
         </p>
